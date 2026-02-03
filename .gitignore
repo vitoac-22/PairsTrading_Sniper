@@ -1,0 +1,35 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Entornos Virtuales (¡CRUCIAL!) ---
+finance_tools/
+venv/
+env/
+.env
+
+# --- Mac OS (Basura del Finder) ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- IDEs (Nadie quiere ver tu config de VSCode) ---
+.vscode/
+.idea/
+
+# --- Proyecto Específico ---
+# Datos crudos (no subas CSVs gigantes, Github te odiará)
+data/raw/*
+data/processed/*
+# Pero mantén las carpetas vacías usando un archivo .gitkeep si quieres
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Logs y Gráficos (son resultados, no código)
+output/logs/*
+output/plots/*
+
+# Credenciales (SIEMPRE IGNORAR)
+config/keys.py
+secrets.json
