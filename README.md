@@ -12,18 +12,19 @@ El core del proyecto se basa en la hipótesis de que ciertos pares de activos ti
 
 ### 1. Cointegración (No confundir con Correlación)
 
-Usamos el **Test de Engle-Granger** para verificar si la combinación lineal de dos series de tiempo no estacionarias () resulta en una serie estacionaria ().
-
+Usamos el Test de Engle-Granger para verificar si la combinación lineal de dos series de tiempo no estacionarias ($X_t, Y_t$) resulta en una serie estacionaria ($\epsilon_t$).$$Y_t = \beta X_t + \epsilon_t$$
 Donde:
 
-* : Precio del activo dependiente.
-* : Precio del activo benchmark.
-* : *Hedge Ratio* (calculado vía OLS).
-* : El residuo (Spread), que **debe** ser estacionario ().
+* $Y_t$: Precio del activo dependiente.
+* $X_t$: Precio del activo benchmark.
+* $\beta$: Hedge Ratio (calculado vía OLS).
+* $\epsilon_t$: El residuo (Spread), que debe ser estacionario ($I(0)$).
 
-Si el p-value del test ADF sobre  es , asumimos cointegración.
+Si el p-value del test ADF sobre $\epsilon_t$ es $< 0.05$, asumimos cointegración.
 
 ### 2. Generación de Señales (Z-Score)
+
+$$Z_t = \frac{S_t - \mu_{rolling}}{\sigma_{rolling}}$$
 
 Para normalizar la volatilidad, transformamos el Spread en un Z-Score usando una ventana móvil (*Rolling Window*) para evitar el sesgo de anticipación (*Look-ahead bias*):
 
