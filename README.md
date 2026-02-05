@@ -12,7 +12,7 @@ El core del proyecto se basa en la hipótesis de que ciertos pares de activos ti
 
 ### 1. Cointegración (No confundir con Correlación)
 
-Usamos el Test de Engle-Granger para verificar si la combinación lineal de dos series de tiempo no estacionarias ($X_t, Y_t$) resulta en una serie estacionaria ($\epsilon_t$).$$Y_t = \beta X_t + \epsilon_t$$
+Usamos el Test de Engle-Granger para verificar si la combinación lineal de dos series de tiempo no estacionarias ($X_t, Y_t$) resulta en una serie estacionaria ($\epsilon_t$). $$Y_t = \beta X_t + \epsilon_t$$
 Donde:
 
 * $Y_t$: Precio del activo dependiente.
