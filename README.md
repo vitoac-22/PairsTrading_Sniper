@@ -29,9 +29,9 @@ Para normalizar la volatilidad, transformamos el Spread en un Z-Score usando una
 
 Reglas de Trading:
 
-* **Short Spread ():** El activo  está caro relativo a . Vendemos , Compramos .
-* **Long Spread ():** El activo  está barato relativo a . Compramos , Vendemos .
-* **Exit ():** Cerramos posiciones cuando la ineficiencia desaparece.
+* **Short Spread ($Z > 2.0$):** El activo $Y$ está caro relativo a $X$. Vendemos $Y$, Compramos $\beta \times X$.
+* **Long Spread ($Z < -2.0$):** El activo $Y$ está barato relativo a $X$. Compramos $Y$, Vendemos $\beta \times X$.
+* **Exit ($Z \approx 0$):** Cerramos posiciones cuando la ineficiencia desaparece.
 
 ## 🚀 Arquitectura del Proyecto
 
